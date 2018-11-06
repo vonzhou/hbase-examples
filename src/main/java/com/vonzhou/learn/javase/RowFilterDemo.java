@@ -55,6 +55,7 @@ public class RowFilterDemo extends Base {
         rs.close();
 
 
+        System.out.println("==============MultiRowRangeFilter===========");
         // 多行范围过滤器
         List<MultiRowRangeFilter.RowRange> rowRanges = Arrays.asList(
                 new MultiRowRangeFilter.RowRange("row1", true, "row3", false),
@@ -65,9 +66,10 @@ public class RowFilterDemo extends Base {
         printOngPage(rs);
         rs.close();
 
+        System.out.println("====================PrefixFilter==================");
         // 行前缀过滤器
         PrefixFilter prefixFilter = new PrefixFilter(Bytes.toBytes("row"));
-        scan.setFilter(new MultiRowRangeFilter(rowRanges));
+        scan.setFilter(prefixFilter);
         rs = table.getScanner(scan);
         printOngPage(rs);
         rs.close();

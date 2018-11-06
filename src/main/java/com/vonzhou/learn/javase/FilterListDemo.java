@@ -18,12 +18,12 @@ public class FilterListDemo extends Base {
         puts.add(put);
 
         put = new Put(Bytes.toBytes("row2"));
-        put.addColumn(Bytes.toBytes(COL_FAMILY), Bytes.toBytes("name"), Bytes.toBytes("zhanghua"));
+        put.addColumn(Bytes.toBytes(COL_FAMILY), Bytes.toBytes("name"), Bytes.toBytes("lisi"));
         puts.add(put);
 
 
         put = new Put(Bytes.toBytes("row3"));
-        put.addColumn(Bytes.toBytes(COL_FAMILY), Bytes.toBytes("name"), Bytes.toBytes("lisi"));
+        put.addColumn(Bytes.toBytes(COL_FAMILY), Bytes.toBytes("name"), Bytes.toBytes("zhanghua"));
         puts.add(put);
 
         put = new Put(Bytes.toBytes("row4"));
